@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Complete_Information"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Registration_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:paddingTop="10dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_newaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/complete"
+        android:gravity="center_horizontal"
+        android:textColor="@color/blue"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:translationX="6dp"
+        android:translationY="50dp" />
+    <TextView
+        android:id="@+id/textgenderView"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/Gender"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:translationX="15dp"
+        android:translationY="100dp"
+        />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationX="180dp"
+        android:translationY="55dp">
+
+        <RadioButton
+            android:id="@+id/maleradioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:checked="true"
+            android:text="@string/Male"
+            android:textColor="@color/blue"
+            android:translationX="10dp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/femaleradioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:text="@string/Female"
+            android:textColor="@color/blue"
+            android:translationX="30dp"></RadioButton>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/texttestView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/Weight"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:translationX="15dp"
+        android:translationY="92dp"
+        />
+
+    <LinearLayout
+        android:layout_width="152dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back"
+        android:orientation="horizontal"
+        android:translationX="180dp"
+        android:translationY="55dp">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:background="@drawable/button_border"
+            android:foreground="@drawable/mines"
+
+            android:translationX="2dp"
+            android:translationY="4dp" />
+
+        <EditText
+            android:id="@+id/textView2"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:translationX="2dp"
+            android:translationY="0dp" />
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:foreground="@drawable/add"
+            android:translationX="2dp"
+            android:translationY="4dp"
+            android:background="@drawable/back"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textkgView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/Kg"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:translationX="350dp"
+        android:translationY="25dp"
+        />
+
+    <TextView
+        android:id="@+id/textlenghtView2View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/length"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:translationX="15dp"
+        android:translationY="75dp"
+        />
+
+    <LinearLayout
+        android:layout_width="152dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back"
+        android:orientation="horizontal"
+        android:translationX="180dp"
+        android:translationY="45dp">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:background="@drawable/button_border"
+            android:foreground="@drawable/mines"
+            android:translationX="2dp"
+            android:translationY="4dp" />
+
+        <EditText
+            android:id="@+id/lenghttextView2"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:translationY="0dp"
+            android:translationX="2dp"/>
+
+        <Button
+            android:id="@+id/lenghtaddbutton"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:foreground="@drawable/add"
+            android:translationX="2dp"
+            android:translationY="4dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textcmView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="cm"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:translationX="350dp"
+        android:translationY="20dp"
+        />
+    <TextView
+        android:id="@+id/texbirthView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/dateOfBirth"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:translationX="15dp"
+        android:translationY="50dp"
+       />
+
+
+    <EditText
+        android:id="@+id/textbirthtView2"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:inputType="date"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:translationX="180dp"
+        android:translationY="14dp" />
+
+    <Button
+        android:id="@+id/savedata"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/saveData_Button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:translationX="60dp"
+        android:translationY="90dp" />
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:animateLayoutChanges="false"
+    android:background="#FFFFFF"
+    tools:context=".Loginpage"
+
+
+    >
+
+    <TextView
+        android:id="@+id/text_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/haveAccount"
+        android:textAlignment="center"
+        android:textColor="#A3A5A6"
+        android:textSize="20sp"
+        android:translationX="30dp"
+        android:translationY="200dp" />
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/welcome"
+        android:textColor="@color/blue"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:translationX="70dp"
+        android:translationY="130dp" />
+
+    <TextView
+        android:id="@+id/text_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:paddingTop="10dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_condition2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="You Don't Have an Account?"
+        android:textAlignment="center"
+        android:textColor="#141515"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:translationX="50dp"
+        android:translationY="530dp" />
+
+    <TextView
+        android:id="@+id/text_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/SignUp"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:translationX="330dp"
+        android:translationY="530dp" />
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+
+        android:text="@string/Username"
+
+        android:textColor="@color/gray"
+
+        android:textSize="17sp"
+
+        android:translationX="15dp"
+        android:translationY="300dp" />
+
+    <EditText
+        android:id="@+id/TextPassword"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:textColorLink="#2196F3"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:translationX="15dp"
+        android:translationY="350dp" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:maxHeight="3dp"
+        android:paddingLeft="10dp"
+        android:text="@string/LOGIN"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:translationX="60dp"
+        android:translationY="450dp" />
+
+    <Button
+        android:id="@+id/button_iconPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:background="#00B82323"
+        android:translationX="330dp"
+        android:translationY="343dp"
+        app:icon="@drawable/eys"
+        app:iconSize="30dp"
+        app:iconTint="#81171515" />
+
+</RelativeLayout>

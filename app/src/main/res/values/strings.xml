@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BMI Analyzer</string>
+    <string name="welcome">Welcome Back</string>
+    <string name="haveAccount">If you already have an account, log in</string>
+    <string name="ButtonNext">Next</string>
+    <string name="createAccount">Create New Account</string>
+    <string name="doNotHaveAccount">If you do not already have an account</string>
+    <string name="name">Name</string>
+    <string name="Q_HaveAccount">You have An Account ?</string>
+    <string name="Q_doNotHaveAccount">You Do not Have An Account ?</string>
+    <string name="Login">Login</string>
+    <string name="LOGIN">LOG IN</string>
+    <string name="E_Mail">E-Mail</string>
+    <string name="Password">Password</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="ButtonEye">ButtonEye</string>
+    <string name="create_Button">CREATE</string>
+    <string name="Username">Username</string>
+    <string name="Re_Password">Re-Password</string>
+    <string name="complete">Complete Your Information</string>
+    <string name="Gender">Gender</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Weight">Weight</string>
+    <string name="saveData_Button">Save Data</string>
+    <string name="dateOfBirth">Date Of Birth</string>
+    <string name="date">Date</string>
+    <string name="cm">cm</string>
+    <string name="length">Length</string>
+    <string name="Kg">Kg</string>
+    <string name="ButtonMinus">minus</string>
+    <string name="ButtonPlus">plus</string>
+    <string name="newRecord">New Record</string>
+    <string name="time">Time</string>
+    <string name="ButtonPrevious">previous</string>
+</resources>
