@@ -10,6 +10,7 @@
     <string name="Q_doNotHaveAccount">You Do not Have An Account ?</string>
     <string name="Login">Login</string>
     <string name="LOGIN">LOG IN</string>
+    <string name="LOGOUT">Logout</string>
     <string name="E_Mail">E-Mail</string>
     <string name="Password">Password</string>
     <string name="SignUp">Sign Up</string>
@@ -33,4 +34,21 @@
     <string name="newRecord">New Record</string>
     <string name="time">Time</string>
     <string name="ButtonPrevious">previous</string>
+    <string name="AddFoodDetails">Add Food Details</string>
+    <string name="category">Category</string>
+    <string name="calory">Calory</string>
+    <string name="photo">Photo</string>
+    <string name="Uploadphoto">Uploadphoto</string>
+    <string name="Save">Save</string>
+    <string name="hi">Hi, Mohammed</string>
+    <string name="currentstatus">Current Status</string>
+    <string name="oldStatus">Old Status</string>
+    <string name="textdate">20/1/2020</string>
+    <string name="textkg">60kg</string>
+    <string name="statuse">Normal</string>
+    <string name="hight">170 cm</string>
+    <string name="add_food">Add Food</string>
+    <string name="add_recored">Add Record</string>
+    <string name="view_food">View Food</string>
+    <string name="edit_food">Edit Food</string>
 </resources>

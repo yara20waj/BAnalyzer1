@@ -8,8 +8,7 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Complete_Information extends AppCompatActivity {
-
+public class Home extends AppCompatActivity {
     Timer timer;
 
     @Override
@@ -21,7 +20,7 @@ public class Complete_Information extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Complete_Information.this, Home.class);
+                Intent intent = new Intent(Home.this, Add_record.class);
                 startActivity(intent);
                 finish();
             }

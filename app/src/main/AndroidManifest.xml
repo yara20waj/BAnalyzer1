@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAnalyzer">
-        <activity android:name=".Add_record"></activity>
+        <activity android:name=".editfood"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Addfooddetails" />
+        <activity android:name=".Add_record" />
         <activity android:name=".Complete_Information" />
         <activity android:name=".Registration" />
         <activity android:name=".Loginpage" />
