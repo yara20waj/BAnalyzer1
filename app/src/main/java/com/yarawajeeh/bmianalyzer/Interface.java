@@ -20,7 +20,7 @@ public class Interface extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Interface.this, Loginpage.class);
+                Intent intent = new Intent(Interface.this,Loginpage.class);
                 startActivity(intent);
                 finish();
             }

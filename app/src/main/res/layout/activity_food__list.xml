@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Food_List">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-70dp">
+
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="43dp"
+            android:layout_height="67dp"
+            android:translationX="0dp"
+            android:translationY="0dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/Registration_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:translationX="70dp"
+            android:translationY="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textaddfood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/food_List"
+        android:textColor="@color/blue"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/foodListLayout"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/back"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textaddfood">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:background="@drawable/back"/>
+        <LinearLayout
+            android:id="@+id/foodDetailsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/food_name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/type"
+                android:textColor="@color/grayb"
+                android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/wig"
+                android:textSize="17dp"
+                android:textColor="@color/grayb"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/edit_cancelLayout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:translationX="50dp">
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/blue"
+                android:text="@string/Edit"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:translationX="60dp"
+                android:translationY="20dp"
+                android:background="@color/blue"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/ic_baseline_close_24"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

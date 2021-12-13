@@ -18,7 +18,7 @@ public class Loginpage extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Loginpage.this, Registration.class);
+                Intent intent = new Intent(Loginpage.this,Registration.class);
                 startActivity(intent);
                 finish();
             }

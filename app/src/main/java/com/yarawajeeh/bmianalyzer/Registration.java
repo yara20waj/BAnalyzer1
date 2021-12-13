@@ -18,7 +18,7 @@ public class Registration extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Registration.this, Complete_Information.class);
+                Intent intent = new Intent(Registration.this,Complete_Information.class);
                 startActivity(intent);
                 finish();
             }

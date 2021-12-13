@@ -14,13 +14,13 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complete__information);
+        setContentView(R.layout.activity_home);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Home.this, Add_record.class);
+                Intent intent = new Intent(Home.this,Add_record.class);
                 startActivity(intent);
                 finish();
             }

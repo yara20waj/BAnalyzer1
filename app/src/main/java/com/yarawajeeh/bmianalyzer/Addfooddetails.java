@@ -15,13 +15,13 @@ public class Addfooddetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_complete__information);
+        setContentView(R.layout.activity_addfooddetails);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Addfooddetails.this, editfood.class);
+                Intent intent = new Intent(Addfooddetails.this,Food_List.class);
                 startActivity(intent);
                 finish();
             }

@@ -21,7 +21,7 @@ public class Complete_Information extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Complete_Information.this, Home.class);
+                Intent intent = new Intent(Complete_Information .this, Home.class);
                 startActivity(intent);
                 finish();
             }

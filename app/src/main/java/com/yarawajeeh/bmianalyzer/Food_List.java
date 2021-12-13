@@ -8,20 +8,21 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Add_record extends AppCompatActivity {
+public class Food_List extends AppCompatActivity {
+
 
     Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_record);
+        setContentView(R.layout.activity_food__list);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(Add_record.this,Addfooddetails.class);
+                Intent intent = new Intent(Food_List.this, editfood.class);
                 startActivity(intent);
                 finish();
             }

@@ -51,4 +51,9 @@
     <string name="add_recored">Add Record</string>
     <string name="view_food">View Food</string>
     <string name="edit_food">Edit Food</string>
+    <string name="food_List">Food List</string>
+    <string name="food_name">Salamon</string>
+    <string name="type">Fish</string>
+    <string name="wig">22cal/ g</string>
+    <string name="Edit">Edit</string>
 </resources>
