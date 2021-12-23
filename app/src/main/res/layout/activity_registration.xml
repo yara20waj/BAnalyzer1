@@ -52,7 +52,8 @@
         android:fontFamily="sans-serif-thin"
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
-        android:text="@string/name"
+
+        android:hint="@string/name"
         android:textAllCaps="false"
         android:textColor="#A59999"
         android:textColorLink="@color/blue"
@@ -126,7 +127,7 @@
         android:translationY="470dp" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_signup"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue"
@@ -154,7 +155,7 @@
 
 
     <TextView
-        android:id="@+id/text_signup"
+        android:id="@+id/text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"

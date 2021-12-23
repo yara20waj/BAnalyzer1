@@ -1,7 +1,7 @@
 package com.yarawajeeh.bmianalyzer;
-
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.view.View;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,14 +9,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Interface extends AppCompatActivity {
+    Button nextBtn;
    Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interface);
-
-        timer = new Timer();
+        nextBtn =findViewById(R.id.button_next);
+        nextBtn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Loginpage.class)));
+        /*timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -24,6 +26,6 @@ public class Interface extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },5000);
+        },5000);*/
     }
 }

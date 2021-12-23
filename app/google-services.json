@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "29985867953",
+    "firebase_url": "https://bmianalyzer-67545-default-rtdb.firebaseio.com",
+    "project_id": "bmianalyzer-67545",
+    "storage_bucket": "bmianalyzer-67545.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29985867953:android:1ab2bdf1653f0b34efba90",
+        "android_client_info": {
+          "package_name": "com.yarawajeeh.bmianalyzer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29985867953-3eq6to1trf92ss6pj7ag0vmlsv4aq3p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhXTabxEMyF_KFafBOTZMr-Au18qlPehw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29985867953-3eq6to1trf92ss6pj7ag0vmlsv4aq3p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

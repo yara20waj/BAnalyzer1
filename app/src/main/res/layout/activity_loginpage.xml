@@ -88,8 +88,8 @@
         android:fontFamily="sans-serif"
         android:inputType="textPersonName"
 
-        android:text="@string/Username"
 
+        android:hint="@string/Username"
         android:textColor="@color/gray"
 
         android:textSize="17sp"

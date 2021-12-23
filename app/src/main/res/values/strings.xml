@@ -56,4 +56,14 @@
     <string name="type">Fish</string>
     <string name="wig">22cal/ g</string>
     <string name="Edit">Edit</string>
+    <string name="user_error">Please enter a username</string>
+    <string name="error_invalid_user">User is not valid</string>
+    <string name="password_error">Please enter a password</string>
+    <string name="error_invalid_password">Please enter a password again </string>
+    <string name="title_activity_main_home">MainHome</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

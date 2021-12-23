@@ -219,6 +219,7 @@ tools:context=".Home">
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/logout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="0dp"
