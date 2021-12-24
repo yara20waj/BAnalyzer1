@@ -29,5 +29,9 @@ public class MainHome extends AppCompatActivity {
             startActivity(new Intent(MainHome.this,Loginpage.class));
 
         });
+
+
+
+
     }
 }

@@ -62,8 +62,8 @@ public class Registration extends AppCompatActivity {
             name.setError("Username cannot be empty");
             name.requestFocus();
         }else if(TextUtils.isEmpty(user_repassword)){
-            name.setError("Username cannot be empty");
-            name.requestFocus();
+            repassword.setError("Repassword cannot be empty");
+            repassword.requestFocus();
         }
 
         else {
