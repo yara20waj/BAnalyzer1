@@ -14,7 +14,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.yarawajeeh.bmianalyzer.OOP.Adapter;
 import com.yarawajeeh.bmianalyzer.OOP.BMIAdapter;
 import com.yarawajeeh.bmianalyzer.OOP.BMIRecord;
+import com.yarawajeeh.bmianalyzer.OOP.User;
 
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -27,6 +29,7 @@ public class MainHome extends AppCompatActivity {
     Button addfood;
     Button addrecord;
     Button Viewfood;
+    TextView user;
     RecyclerView recyclerView ;
 
     FirebaseAuth mAuth;
@@ -35,16 +38,21 @@ public class MainHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_home);
+
+       //user=findViewById(R.id.hi);
+     //  user.setText(String.format("Hi,%s!", User.getUser().getName()));
+
+
         addfood = findViewById(R.id.addfood);
         addrecord = findViewById(R.id.addrecord);
         Viewfood = findViewById(R.id.Viewfood);
         logout = findViewById(R.id.logout);
         recyclerView = findViewById(R.id.recyclerView);
         records = new ArrayList<>();
-        records.add(new BMIRecord("22/3/2001", "Normal",165,160));
-        records.add(new BMIRecord("22/3/2001", "Normal",165,160));
-        records.add(new BMIRecord("22/3/2001", "Normal",165,160));
-        records.add(new BMIRecord("22/3/2001", "Normal",165,160));
+        records.add(new BMIRecord("22/3/2001", "Normal",165,170));
+        records.add(new BMIRecord("22/3/2001", "Normal",165,170));
+        records.add(new BMIRecord("22/3/2001", "Normal",165,170));
+        records.add(new BMIRecord("22/3/2001", "Normal",165,170));
 
         recoAd = new Adapter(MainHome.this , records);
         recyclerView.setAdapter(recoAd);

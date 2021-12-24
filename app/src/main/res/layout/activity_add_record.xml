@@ -53,7 +53,7 @@
 
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/w_minus"
             android:layout_width="26dp"
             android:layout_height="20dp"
             android:background="@drawable/button_border"
@@ -63,17 +63,18 @@
             android:translationY="4dp" />
 
         <EditText
-            android:id="@+id/editttextView2"
+            android:id="@+id/width"
             android:layout_width="96dp"
             android:layout_height="match_parent"
             android:background="@drawable/back"
             android:textColor="@color/blue"
             android:textSize="15sp"
             android:translationX="2dp"
-            android:translationY="0dp" />
+            android:translationY="0dp"
+            android:inputType="number"/>
 
         <Button
-            android:id="@+id/addbutton8"
+            android:id="@+id/w_Plus"
             android:layout_width="26dp"
             android:layout_height="20dp"
             android:foreground="@drawable/add"
@@ -117,7 +118,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/l_minus"
             android:layout_width="26dp"
             android:layout_height="20dp"
             android:background="@drawable/button_border"
@@ -127,17 +128,18 @@
             android:translationY="4dp" />
 
         <EditText
-            android:id="@+id/textView2"
+            android:id="@+id/length"
             android:layout_width="96dp"
             android:layout_height="match_parent"
             android:background="@drawable/back"
             android:textColor="@color/blue"
             android:textSize="15sp"
             android:translationX="2dp"
-            android:translationY="0dp" />
+            android:translationY="0dp"
+            android:inputType="number"/>
 
         <Button
-            android:id="@+id/addbutton"
+            android:id="@+id/l_Plus"
             android:layout_width="26dp"
             android:layout_height="20dp"
             android:foreground="@drawable/add"
@@ -172,15 +174,20 @@
 
 
     <EditText
-        android:id="@+id/textbirthtView2"
+        android:id="@+id/dateview"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:background="@drawable/back"
         android:inputType="date"
+        android:format12Hour="dd.MM.yyyy"
+        android:format24Hour="@null"
         android:textColor="@color/blue"
         android:textSize="25sp"
         android:translationX="180dp"
-        android:translationY="14dp" />
+        android:translationY="14dp"
+
+       />
+
 
     <TextView
         android:id="@+id/dateView"
@@ -196,11 +203,11 @@
 
 
     <EditText
-        android:id="@+id/timeView2"
+        android:id="@+id/time"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:background="@drawable/back"
-        android:inputType="date"
+        android:inputType="time"
         android:textColor="@color/blue"
         android:textSize="25sp"
         android:translationX="180dp"
