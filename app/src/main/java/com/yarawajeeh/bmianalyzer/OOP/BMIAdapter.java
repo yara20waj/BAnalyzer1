@@ -25,17 +25,20 @@ public class BMIAdapter extends RecyclerView.Adapter<BMIHolder> {
     @NonNull
     @Override
     public BMIHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.elemnt,false);
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.activity_t_element,parent,false);
+        return new BMIHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull BMIHolder holder, int position) {
+        BMIRecord record;
+        record = records.get(position);
+        holder.setBMIRecord(record);
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return records.size();
     }
 }
