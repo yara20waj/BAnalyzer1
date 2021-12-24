@@ -103,7 +103,7 @@
             android:translationY="4dp" />
 
         <EditText
-            android:id="@+id/textView2"
+            android:id="@+id/width"
             android:layout_width="96dp"
             android:layout_height="match_parent"
             android:background="@drawable/back"
@@ -166,7 +166,7 @@
             android:translationY="4dp" />
 
         <EditText
-            android:id="@+id/lenghttextView2"
+            android:id="@+id/length"
             android:layout_width="96dp"
             android:layout_height="match_parent"
             android:background="@drawable/back"
@@ -210,7 +210,7 @@
 
 
     <EditText
-        android:id="@+id/textbirthtView2"
+        android:id="@+id/dateofbirth"
         android:layout_width="204dp"
         android:layout_height="wrap_content"
         android:background="@drawable/back"

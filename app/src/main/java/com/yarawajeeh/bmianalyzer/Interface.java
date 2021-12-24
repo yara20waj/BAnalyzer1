@@ -16,8 +16,13 @@ public class Interface extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interface);
+
         nextBtn =findViewById(R.id.button_next);
-        nextBtn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Loginpage.class)));
+        nextBtn.setOnClickListener(view -> {
+            startActivity(new Intent(Interface.this,Loginpage.class));
+           // finish();
+        });
+        //nextBtn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Loginpage.class)));
         /*timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

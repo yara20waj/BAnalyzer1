@@ -50,7 +50,7 @@ public class Loginpage extends AppCompatActivity {
     private void checkIfEmailVerified(){
         FirebaseUser users=FirebaseAuth.getInstance().getCurrentUser();
         boolean emailVerified=users.isEmailVerified();
-        if(!emailVerified){
+        if(users.isEmailVerified()){
             Toast.makeText(this,"Verify the Email Id",Toast.LENGTH_SHORT).show();
             mAuth.signOut();
             finish();

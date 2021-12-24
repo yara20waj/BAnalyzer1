@@ -12,22 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAnalyzer">
         <activity android:name=".t_element"></activity>
-        <activity
-            android:name=".MainHome"
-            android:label="@string/title_activity_main_home">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
         <activity android:name=".Food_List" />
         <activity android:name=".editfood" />
-        <activity android:name=".Home" />
         <activity android:name=".Addfooddetails" />
         <activity android:name=".Add_record" />
         <activity android:name=".Complete_Information" />
@@ -36,7 +27,6 @@
         <activity android:name=".Interface">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
