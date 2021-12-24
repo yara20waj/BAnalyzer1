@@ -1,9 +1,8 @@
 package com.yarawajeeh.bmianalyzer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 public class t_element extends AppCompatActivity {
 
     @Override

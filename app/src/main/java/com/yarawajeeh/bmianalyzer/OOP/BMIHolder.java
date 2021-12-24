@@ -10,7 +10,11 @@ import com.yarawajeeh.bmianalyzer.R;
 
 public class BMIHolder extends RecyclerView.ViewHolder {
     private final TextView date;
-    private final TextView status;private final TextView w;private final TextView l;private BMIRecord record;
+    private final TextView status;
+    private final TextView w;
+    private final TextView l;
+    private BMIRecord record;
+
     public BMIHolder(@NonNull View itemView) {
         super(itemView);
         this.date = itemView.findViewById(R.id.date);
