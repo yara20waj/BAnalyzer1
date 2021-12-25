@@ -48,19 +48,19 @@ public class Registration extends AppCompatActivity {
         });
     }
     private void createUser(){
-        String user_name =  name.getText().toString();
-        String user_email =  email.getText().toString();
-        String user_password =  password.getText().toString();
-        String user_repassword =  repassword.getText().toString();
-        if (TextUtils.isEmpty(user_email)){
-            email.setError("Email cannot be empty");
-            email.requestFocus();
-        }else if(TextUtils.isEmpty(user_password)){
-            password.setError("password cannot be empty");
-            password.requestFocus();
-        }else if(TextUtils.isEmpty(user_name)){
+        String user_name =  name.getText().toString().trim();
+        String user_email =  email.getText().toString().trim();
+        String user_password =  password.getText().toString().trim();
+        String user_repassword =  repassword.getText().toString().trim();
+        if (TextUtils.isEmpty(user_name)){
             name.setError("Username cannot be empty");
             name.requestFocus();
+        }else if (TextUtils.isEmpty(user_email)){
+            email.setError("Email cannot be empty");
+            email.requestFocus();
+        }else if(TextUtils.isEmpty(user_email)){
+                password.setError("password cannot be empty");
+                password.requestFocus();
         }else if(TextUtils.isEmpty(user_repassword)){
             repassword.setError("Repassword cannot be empty");
             repassword.requestFocus();
@@ -71,10 +71,8 @@ public class Registration extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(Registration.this,"Successful" ,Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Registration.this,Complete_Information.class));
-                        //finish();
-                    }else {
+                        Toast.makeText(Registration.this,"Successful singnup" ,Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(Registration.this,Complete_Information.class));                    }else {
                         Toast.makeText(Registration.this,"error" + task.getException().getMessage(),Toast.LENGTH_LONG).show();
 
                     }

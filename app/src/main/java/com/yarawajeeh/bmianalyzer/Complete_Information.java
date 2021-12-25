@@ -73,10 +73,7 @@ public class Complete_Information extends AppCompatActivity  implements DatePick
 
 
 
-
-
-
-       /* timer = new Timer();
+     /* timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -85,6 +82,9 @@ public class Complete_Information extends AppCompatActivity  implements DatePick
                 finish();
             }
         },5000);*/
+
+
+
     }
 
 
