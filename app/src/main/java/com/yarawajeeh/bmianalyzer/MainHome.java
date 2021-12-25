@@ -1,10 +1,10 @@
 package com.yarawajeeh.bmianalyzer;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.yarawajeeh.bmianalyzer.OOP.Adapter;
-import com.yarawajeeh.bmianalyzer.OOP.BMIAdapter;
-import com.yarawajeeh.bmianalyzer.OOP.BMIRecord;
-import com.yarawajeeh.bmianalyzer.OOP.User;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.yarawajeeh.bmianalyzer.OOP.BMIRecord;
+
+
+
 
 import java.util.ArrayList;
 import java.util.Timer;

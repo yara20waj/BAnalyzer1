@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAnalyzer">
-        <activity android:name=".t_element"></activity>
-
+        <activity android:name=".t_element" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -28,6 +27,7 @@
         <activity android:name=".Interface">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
