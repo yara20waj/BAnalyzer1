@@ -6,17 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".Complete_Information"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/Registration_tittle"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/blue"
-        android:paddingTop="10dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-70dp">
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="67dp"
+            android:translationX="0dp"
+            android:translationY="0dp"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/Registration_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:translationX="70dp"
+            android:translationY="8dp" />
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/text_newaccount"

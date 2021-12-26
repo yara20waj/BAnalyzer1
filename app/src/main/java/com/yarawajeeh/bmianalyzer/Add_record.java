@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.DatePicker;
 import java.util.Calendar;
 import java.util.Timer;
+
+import android.widget.ImageView;
 import android.widget.TimePicker;
 
 import static android.text.format.DateFormat.is24HourFormat;
@@ -22,6 +24,7 @@ public class Add_record extends AppCompatActivity implements DatePickerDialog.On
     EditText width,length,date,time;
     Button width_minus,length_minus,width_Plus,length_Plus,savedata;
     String dateTime;
+    ImageView imageButton;
 
     int dayOfMonth, month, year, hour, minute;
     int myday, myMonth, myYear, myHour, myMinute;
@@ -43,6 +46,7 @@ public class Add_record extends AppCompatActivity implements DatePickerDialog.On
         Calendar calendar = Calendar.getInstance();
         Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR);
+        imageButton=findViewById(R.id.imageButton);
         minute = c.get(Calendar.MINUTE);
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
@@ -58,7 +62,18 @@ public class Add_record extends AppCompatActivity implements DatePickerDialog.On
             }
 
         });
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Add_record.this, MainHome.class);
+                // Sending Email to Dashboard Activity using intent.
+//            intent.putExtra(userEmail"",email);
+                startActivity(intent);
 
+
+            }
+
+        });
         time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

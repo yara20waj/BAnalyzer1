@@ -18,7 +18,7 @@
 
 
         <ImageView
-            android:id="@+id/imageButton"
+            android:id="@+id/arrow"
             android:layout_width="43dp"
             android:layout_height="67dp"
             android:translationX="0dp"

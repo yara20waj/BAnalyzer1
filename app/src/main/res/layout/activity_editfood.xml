@@ -82,7 +82,7 @@
             tools:layout_editor_absoluteY="170dp" />
 
         <EditText
-            android:id="@+id/textbirthtView2"
+            android:id="@+id/date"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -109,7 +109,7 @@
             tools:layout_editor_absoluteY="170dp" />
 
         <EditText
-            android:id="@+id/input_categoryView2"
+            android:id="@+id/category"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:autofillHints="category"
@@ -122,7 +122,7 @@
 
 
         <ImageView
-            android:id="@+id/dropdown_caloryView2"
+            android:id="@+id/arrow"
             android:layout_width="39dp"
             android:layout_height="37dp"
             android:background="@drawable/back"
@@ -150,7 +150,7 @@
             tools:layout_editor_absoluteY="170dp" />
 
         <EditText
-            android:id="@+id/input_caloryView2"
+            android:id="@+id/calory"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
@@ -206,7 +206,7 @@
             app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Uploadphoto"
             android:layout_width="wrap_content"
             android:layout_height="63dp"
             android:layout_marginLeft="60dp"
@@ -218,7 +218,7 @@
             app:layout_constraintVertical_bias="0.325" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:layout_marginLeft="80dp"

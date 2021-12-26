@@ -221,7 +221,7 @@
         android:translationY="14dp" />
 
     <Button
-        android:id="@+id/savedata"
+        android:id="@+id/save_data"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/blue"

@@ -42,10 +42,7 @@ public class Loginpage extends AppCompatActivity {
         login.setOnClickListener(view ->{
             loginUser();
         });
-        singup.setOnClickListener(view -> {
-
-            startActivity(new Intent(Loginpage.this,Registration.class));
-        });
+        singup.setOnClickListener(view -> startActivity(new Intent(Loginpage.this,Registration.class)));
     }
     private void checkIfEmailVerified(){
         FirebaseUser users=FirebaseAuth.getInstance().getCurrentUser();

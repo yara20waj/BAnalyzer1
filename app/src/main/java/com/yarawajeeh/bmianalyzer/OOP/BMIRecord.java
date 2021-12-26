@@ -3,6 +3,7 @@ package com.yarawajeeh.bmianalyzer.OOP;
 public class BMIRecord {
     String date;
     String status;
+    String id;
     int w;
     int l;
     public BMIRecord(String date, String status, int w, int l) {
@@ -11,7 +12,7 @@ public class BMIRecord {
         this.w= w;
         this.l= l;
     }
-
+    public BMIRecord(){}
     public String getDate() {
         return date;
     }
@@ -44,4 +45,6 @@ public class BMIRecord {
     public void setL(int l) {
         this.l = l;
     }
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 }

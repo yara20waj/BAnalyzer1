@@ -14,7 +14,7 @@ import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Complete_Information extends AppCompatActivity  implements DatePickerDialog.OnDateSetListener {
+public class Complete_Information extends AppCompatActivity  {
 
     Timer timer;
     EditText width,length,date,time;
@@ -27,23 +27,21 @@ public class Complete_Information extends AppCompatActivity  implements DatePick
         setContentView(R.layout.activity_complete__information);
         width=findViewById(R.id.width);
         length=findViewById(R.id.length);
-        date=findViewById(R.id.dateview);
+        date=findViewById(R.id.dateofbirth);
         width_minus=findViewById(R.id.w_minus);
         length_minus=findViewById(R.id.l_minus);
         width_Plus=findViewById(R.id.w_Plus);
         length_Plus=findViewById(R.id.l_Plus);
         Calendar calendar = Calendar.getInstance();
         Calendar c = Calendar.getInstance();
-        hour = c.get(Calendar.HOUR);
-        minute = c.get(Calendar.MINUTE);
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-        savedata=findViewById(R.id.savedata);
+        savedata=findViewById(R.id.save_data);
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(com.yarawajeeh.bmianalyzer.Complete_Information.this,Complete_Information.this, year, month, dayOfMonth);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(com.yarawajeeh.bmianalyzer.Complete_Information.this, (DatePickerDialog.OnDateSetListener) Complete_Information.this, year, month, dayOfMonth);
                 datePickerDialog.show();
 
 
@@ -86,14 +84,6 @@ public class Complete_Information extends AppCompatActivity  implements DatePick
 
 
     }
-
-
-
-
-
-
-
-
     private void decreaseIntegerlength() {
         int x= Integer.parseInt(length.getText().toString().trim()) -1;
         length.setText(""+x);
@@ -121,9 +111,7 @@ public class Complete_Information extends AppCompatActivity  implements DatePick
         myYear = year;
         myday = dayOfMonth;
         myMonth = month;
-
-
         String edate = myYear+"/"+myMonth+"/"+myday;
-        date.setText( edate );
+        date.setText(edate);
     }
 }

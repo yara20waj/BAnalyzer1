@@ -58,7 +58,7 @@ public class Registration extends AppCompatActivity {
         }else if (TextUtils.isEmpty(user_email)){
             email.setError("Email cannot be empty");
             email.requestFocus();
-        }else if(TextUtils.isEmpty(user_email)){
+        }else if(TextUtils.isEmpty(user_password)){
                 password.setError("password cannot be empty");
                 password.requestFocus();
         }else if(TextUtils.isEmpty(user_repassword)){
@@ -72,7 +72,8 @@ public class Registration extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(Registration.this,"Successful singnup" ,Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Registration.this,Complete_Information.class));                    }else {
+                        startActivity(new Intent(Registration.this,Complete_Information.class));
+                    }else {
                         Toast.makeText(Registration.this,"error" + task.getException().getMessage(),Toast.LENGTH_LONG).show();
 
                     }
