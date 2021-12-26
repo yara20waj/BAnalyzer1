@@ -130,9 +130,7 @@
             android:textSize="25sp"
             android:translationX="350dp"
             android:translationY="-65dp"
-            />
-
-           // app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24"
+            app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24" />
 
         <TextView
             android:id="@+id/calory_addfoodname"

@@ -9,6 +9,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,6 +30,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -45,6 +48,8 @@ public class Addfooddetails extends AppCompatActivity {
     private ProgressDialog loade;
     private FirebaseDatabase database;
     Timer timer;
+    ImageView arrow;
+
     FirebaseAuth mAuth;
     ImageView f_img;
     String[] type={"Meat and poultry","Fish and seafood","Vegetables","Fruits"};
@@ -54,20 +59,24 @@ public class Addfooddetails extends AppCompatActivity {
         setContentView(R.layout.activity_addfooddetails);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
+        Ref = FirebaseDatabase.getInstance().getReference("BMI");
+        loade = new ProgressDialog(this);
 
-       // Spinner spin =  findViewById(R.id.spinner_category);
+        // Spinner spin =  findViewById(R.id.spinner_category);
 
-        f_name=findViewById(R.id.name);
-        f_calory=findViewById(R.id.calory);
-        f_save= findViewById(R.id.save);
+        f_name = findViewById(R.id.name);
+        f_calory = findViewById(R.id.calory);
+        f_save = findViewById(R.id.save);
+        arrow.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainHome.class)));
+
+        Spinner spin = findViewById(R.id.dropdown_category);
 
 
-        f_save.setOnClickListener(new View.OnClickListener() {
+        spin.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) Addfooddetails.this);
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                ValidateProductData();
-            }
-        });
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                category = spin.getItemAtPosition(position).toString();
       /*  timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -77,85 +86,53 @@ public class Addfooddetails extends AppCompatActivity {
                 finish();
             }
         },5000);*/
-    }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        ArrayAdapter aaadapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Collections.singletonList(category));
+        aaadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(aaadapter);
+
+        f_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ValidateProductData();
+            }
+        });
+    }
     private void ValidateProductData() {
         name =  f_name.getText().toString();
         calory = f_calory.getText().toString();
 
-
-
           if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "Please write name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "name:", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(category)) {
-            Toast.makeText(this, "Please write category food...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "category food:", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(calory)) {
-            Toast.makeText(this, "Please write calory food...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "food:", Toast.LENGTH_SHORT).show();
         } else {
             StoreProductInformation();
         }
     }
 
     private void StoreProductInformation() {
-
-        loade.setMessage("Dear user, please wait while we are adding the new Food.");
+        loade.setMessage("waitting.");
         loade.setCanceledOnTouchOutside(false);
         loade.show();
 
-        Calendar calendar = Calendar.getInstance();
+        Calendar c = Calendar.getInstance();
 
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
-        Date = currentDate.format(calendar.getTime());
+        Date = currentDate.format(c.getTime());
 
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        Time = currentTime.format(calendar.getTime());
+        Time = currentTime.format(c.getTime());
 
         dateandtime = Date + " " + Time;
-
-
-        final StorageReference filePath = imgref.child(myImag.getLastPathSegment() + dateandtime + ".jpg");
-
-        final UploadTask uploadTask = filePath.putFile(myImag);
-
-
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                String message = e.toString();
-                Toast.makeText(Addfooddetails.this, "Error: " + message, Toast.LENGTH_SHORT).show();
-                loade.dismiss();
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(Addfooddetails.this, "Food Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
-
-                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                    @Override
-                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                        if (!task.isSuccessful()) {
-                            throw task.getException();
-                        }
-
-                        downloadImageUrl = filePath.getDownloadUrl().toString();
-                        return filePath.getDownloadUrl();
-                    }
-                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Uri> task) {
-                        if (task.isSuccessful()) {
-                            downloadImageUrl = task.getResult().toString();
-
-                            Toast.makeText(Addfooddetails.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
-
-                            SaveProductInfoToDatabase();
-                        }
-                    }
-
-                     
-                });
-            }
-        });
     }
 
     private void SaveProductInfoToDatabase() {
@@ -186,5 +163,6 @@ public class Addfooddetails extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 }
