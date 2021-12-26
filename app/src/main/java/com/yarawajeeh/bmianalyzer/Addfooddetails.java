@@ -37,7 +37,7 @@ import java.util.TimerTask;
 
 public class Addfooddetails extends AppCompatActivity {
     EditText f_name,f_calory;
-    Button uploadphoto,f_save;
+    Button  f_save;
     private String Date,Time;
     String name,category,calory,i;
     private static final int myfile=1;
